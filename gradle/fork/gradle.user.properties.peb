@@ -1,0 +1,33 @@
+# === Gradle AEM Plugin ===
+
+package.manager.deployAvoidance={{packageDeployAvoidance}}
+{% if packageDamAssetToggle == 'true' %}
+package.manager.workflowToggle=[dam_asset=false]
+{% endif %}
+
+localInstance.quickstart.distUrl={{ localInstanceQuickstartDistUri }}
+localInstance.quickstart.licenseUrl={{ localInstanceQuickstartLicenseUri }}
+localInstance.openMode={{ localInstanceOpenMode }}
+
+localInstance.spUrl={{ localInstanceSpUri }}
+localInstance.coreComponentsUrl={{ localInstanceCoreComponentsUri }}
+
+instance.default.runModes={{ localInstanceRunModes }}
+instance.default.password={{instancePassword}}
+
+instance.{{instanceType}}-author.serviceCredentialsUrl={{instanceServiceCredentialsUri}}
+instance.{{instanceType}}-author.enabled={{instanceAuthorEnabled}}
+instance.{{instanceType}}-author.httpUrl={{instanceAuthorHttpUrl}}
+instance.{{instanceType}}-author.openPath=/aem/start.html
+instance.{{instanceType}}-publish.enabled={{instancePublishEnabled}}
+instance.{{instanceType}}-publish.httpUrl={{instancePublishHttpUrl}}
+instance.{{instanceType}}-publish.openPath=/crx/packmgr
+
+mvnBuild.args={{mvnBuildArgs}}
+
+# === Gradle Common Plugin ===
+
+notifier.enabled=true
+fileTransfer.user={{companyUser}}
+fileTransfer.password={{companyPassword}}
+fileTransfer.domain={{companyDomain}}

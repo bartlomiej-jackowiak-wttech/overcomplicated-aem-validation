@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/oav/clientlibs"/>
+    <filter root="/apps/oav/components"/>
+    <filter root="/apps/oav/i18n"/>
+</workspaceFilter>

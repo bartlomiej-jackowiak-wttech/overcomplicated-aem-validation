@@ -1,0 +1,30 @@
+digraph "oav" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "com.wttech.oav:oav.ui.apps:content-package:compile"[label=<oav.ui.apps>]
+  "com.wttech.oav:oav.core:jar:compile"[label=<oav.core>]
+  "com.wttech.oav:oav.ui.frontend:zip:compile"[label=<oav.ui.frontend>]
+  "com.wttech.oav:oav.ui.apps.structure:zip:compile"[label=<oav.ui.apps.structure>]
+  "com.wttech.oav:oav.ui.content:content-package:compile"[label=<oav.ui.content>]
+  "com.wttech.oav:oav.ui.apps:zip:compile"[label=<oav.ui.apps>]
+  "com.wttech.oav:oav.ui.config:content-package:compile"[label=<oav.ui.config>]
+  "com.wttech.oav:oav.all:content-package:compile"[label=<oav.all>]
+  "com.wttech.oav:oav.ui.content:zip:compile"[label=<oav.ui.content>]
+  "com.wttech.oav:oav.ui.config:zip:compile"[label=<oav.ui.config>]
+
+  // Edge Definitions:
+  "com.wttech.oav:oav.ui.apps:content-package:compile" -> "com.wttech.oav:oav.core:jar:compile"
+  "com.wttech.oav:oav.ui.apps:content-package:compile" -> "com.wttech.oav:oav.ui.frontend:zip:compile"
+  "com.wttech.oav:oav.ui.apps:content-package:compile" -> "com.wttech.oav:oav.ui.apps.structure:zip:compile"
+  "com.wttech.oav:oav.ui.content:content-package:compile" -> "com.wttech.oav:oav.core:jar:compile"
+  "com.wttech.oav:oav.ui.apps:zip:compile" -> "com.wttech.oav:oav.ui.frontend:zip:compile"
+  "com.wttech.oav:oav.ui.apps:zip:compile" -> "com.wttech.oav:oav.ui.apps.structure:zip:compile"
+  "com.wttech.oav:oav.ui.content:content-package:compile" -> "com.wttech.oav:oav.ui.apps:zip:compile"
+  "com.wttech.oav:oav.ui.config:content-package:compile" -> "com.wttech.oav:oav.ui.apps.structure:zip:compile"
+  "com.wttech.oav:oav.ui.apps:zip:compile" -> "com.wttech.oav:oav.core:jar:compile"
+  "com.wttech.oav:oav.all:content-package:compile" -> "com.wttech.oav:oav.ui.apps:zip:compile"
+  "com.wttech.oav:oav.all:content-package:compile" -> "com.wttech.oav:oav.ui.content:zip:compile"
+  "com.wttech.oav:oav.all:content-package:compile" -> "com.wttech.oav:oav.ui.config:zip:compile"
+}
